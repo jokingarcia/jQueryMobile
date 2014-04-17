@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cervezas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+</head>
+<body>
+<!--✔ Navegacion a páginas simples
+✔ Navegación a multipáginas
+✔ Aplicar transiciones
+✔ Abrir diálogos de distinto tipo
+✔ Abrir popups de distinto tipo
+✔ Mostrar paneles-->
+
+<!-- Start of first page -->
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>Cervezas</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+  <h3>Para eliminar el texto de abajo, haga "tap"</h3>
+		<p>La cerveza (del celtolatín cerevisĭa1 ) es una bebida alcohólica, no destilada, de sabor amargo que se fabrica con granos de cebada u otros cereales cuyo almidón es fermentado en agua con levadura (básicamente Saccharomyces cerevisiae o Saccharomyces pastorianus) y frecuentemente aromatizado con lúpulo, entre otras plantas. De ella se conocen múltiples variantes con una amplia gama de matices debidos a las diferentes formas de elaboración y a los ingredientes utilizados. Generalmente presenta un color ambarino con tonos que van del amarillo oro al negro pasando por los marrones rojizos. Se la considera «gaseosa» (contiene CO2 disuelto en saturación que se manifiesta en forma de burbujas a la presión ambiente) y suele estar coronada de una espuma más o menos persistente. Su aspecto puede ser cristalino o turbio. Su graduación alcohólica puede alcanzar hasta cerca de los 30 % vol., aunque principalmente se encuentra entre los 3 % y los 9 % vol.</p>
+    <h3>Para pasar de página, haga swipe</h3>
+		<p><a href="dialog.html" data-rel="dialog" data-transition="pop">¿Te gusta la Cruzcampo?</a></p>
+		<p><a href="#popupBasic" data-rel="popup">Advertencia</a></p>
+		<!-- Este popup tiene que estar dentro de un page-->
+		<div data-role="popup" id="popupBasic">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
+		data-iconpos="notext" class="ui-btn-right">Close</a>
+		<p>Se recomienda un consumo moderado<p>
+		</div>
+		<p><a href="#mypanel">Mis cervezas preferidas</a></p>
+		<div data-role="panel" id="mypanel" data-position="right">
+ 			<div class="content-primary"> 
+    <ul data-role="listview">
+      <li><a href="mipagina.html">
+        <img src="images/Guinness.jpg" />
+        <h3>Guinness</h3>
+        <p>Negra</p>
+      </a></li>
+      <li><a href="mipagina.html">
+        <img src="images/Rasputin.jpg" />
+        <h3>Rasputin</h3>
+        <p>Imperial Stout</p>
+      </a></li>
+      <li><a href="mipagina.html">
+        <img src="images/Murphys.jpg" />
+        <h3>Murphys</h3>
+        <p>Roja</p>
+      </a></li>
+      <li><a href="mipagina.html">
+        <img src="images/Punk.jpg" />
+        <h3>Punk</h3>
+        <p>IPA</p>
+      </a></li>
+    
+    </ul>
+    </div><!--/content-primary -->    
+		</div><!-- /panel -->
+		
+    <h2>Ingredientes</h2>
+		<div data-role="collapsible-set">
+      <div data-role="collapsible" data-collapsed="true">
+      <h3>Cereales</h3>
+      <p>La elaboración de la cerveza se puede hacer con cualquier cereal. Éste ha de ser preparado para que sus azúcares sean fermentables. En algunos casos una simple cocción es suficiente (como en el caso del maíz) y en otros casos es preciso «maltear» el cereal. En la elaboración de la cerveza se utilizan numerosos cereales en su estado crudo o malteado, siendo la cebada el único que debe maltearse necesariamente y el más utilizado en la cervecería occidental.</p>
+      </div>
+     <div data-role="collapsible">
+     <h3>Lúpulo</h3>
+     <p>Actualmente, en la elaboración occidental de la cerveza, el aditivo principal que se utiliza para hacer de contrapeso (de equilibrante si se prefiere) al dulzor de la malta es el lúpulo (Humulus lupulus). De esta planta se utiliza sin fecundar la flor hembra, llamada “cono”, salvo en Inglaterra. Flores masculinas y femeninas crecen en plantas distintas, por lo que es usual suprimir las masculinas, con lo que se obtienen inflorescencias femeninas sin semillas. En Inglaterra, sin embargo, es costumbre tener un lúpulo masculino por cada doscientos femeninos, con lo que los “conos” tienen semillas. Ello parece proporcionar mayor resistencia a las plantas.</p>
+     </div>
+     <div data-role="collapsible">
+     <h3>Otros aditivos</h3>
+     <p>Se suele considerar que fermentando mosto de frutas se obtiene vino. Pero actualmente se describen cervezas que en una operación anterior a la fermentación se les añade fruta, zumo de fruta o jarabe, procediendo así a una adición de azúcares que provocan una segunda fermentación. Los tipos históricos son la cerveza de cereza (kriek) y la de frambuesa (frambozen). Existen otras de creación mucho más recientes, de kiwi, de albaricoque o de plátano, por ejemplo. Estas especialidades son típicas y casi exclusivas del valle del Senne en Bélgica.</p>
+     </div>
+      <div data-role="collapsible">
+     <h3>Levadura</h3>
+     <p>La mayoría de los estilos de cerveza se hacen usando una de las dos especies unicelulares de microorganismos del tipo Saccharomyces comúnmente llamados levaduras, hongos que (como indica su nombre) consumen azúcar y producen alcohol y anhídrido carbónico. Existen dos tipos básicos diferentes de levadura que definen los dos grandes grupos estilísticos de cervezas:</p>
+     </div>
+    </div>
+
+		<label for="flip-1">Con/Sin alcohol</label>
+			<select name="flip-1" id="flip-1" data-role="slider">
+				<option value="off">Sin</option>
+				<option value="on">Con</option>
+			</select>
+
+		<fieldset data-role="controlgroup" id="selection">
+			<legend>Elija una cerveza (mouseover):</legend>
+     		<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+     		<label id="choice-1" for="radio-choice-1">Guinness</label>
+
+     		<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+     		<label id="choice-2" for="radio-choice-2">Murphys</label>
+
+     		<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+     		<label id="choice-3" for="radio-choice-3">Rasputin</label>
+
+     		<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
+     		<label id="choice-4" for="radio-choice-4">Punk</label>
+		</fieldset>
+
+		
+
+		<label for="basic">¿Cómo debe ser una cerveza para que te guste?</label>
+   		 <input type="text" name="name" id="basic" value=""  />
+
+		<label for="search-basic">Busca una cerveza en la página:</label>
+		<input type="search" name="search" id="search-basic" value="" />
+
+		<label for="slider-1">Graduación preferida:</label>
+		<!--Se usa el data-mini=true para usar la versión pequeña -->
+		<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" data-mini="true"/>
+
+		<div data-role="fieldcontain">
+  		 <label for="select-choice-1" class="select">Tipo de cerveza preferida:</label>
+  		 <select name="select-choice-1" id="select-choice-1">
+     		 <option value="blanca">Blanca</option>
+     		 <option value="rubia">Rubia</option>
+     		 <option value="tostada">Tostada</option>
+     		 <option value="negra">Negra</option>
+   		</select>
+		</div>
+
+    <h3>Enlaces externos</h3>
+		<ul data-role="listview">
+			<li><a href="#page3">Blogs</a>
+			</li>
+			<li><a href="http://es.wikipedia.org/wiki/Cerveza">Wikipedia</a></li>
+			<li><a href="http://www.cervezaysalud.es/">Cerveza y salud</a></li>
+		</ul>
+
+	<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+     <thead>
+       <tr>
+         <th data-priority="2">Posición</th>
+         <th>Marca</th>
+         <th data-priority="3">Ventas</th>
+         <th data-priority="1"><abbr title="Rotten Tomato Rating">País</abbr></th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <th>1</th>
+         <td>Snow</td>
+         <td>74.8</td>
+         <td>Inglaterra</td>
+       </tr>
+       <tr>
+         <th>2</th>
+         <td>Tsingtao</td>
+         <td>57.9</td>
+         <td>China</td>
+       </tr>
+       <tr>
+         <th>3</th>
+         <td>Budweiser</td>
+         <td>40.4</td>
+         <td>USA</td>
+       </tr>
+       <tr>
+         <th>4</th>
+         <td>Yanjing</td>
+         <td>39.6</td>
+         <td>China</td>
+       </tr>
+       <tr>
+         <th>5</th>
+         <td>Bud light</td>
+         <td>36.7</td>
+         <td>USA</td>
+       </tr>
+       <tr>
+         <th>6</th>
+         <td>Corona</td>
+         <td>31.6</td>
+         <td>USA</td>
+       </tr>
+       <tr>
+         <th>7</th>
+         <td>Skol</td>
+         <td>29.9</td>
+         <td>Dinamarca</td>
+       </tr>
+       <tr>
+         <th>8</th>
+         <td>Heineken</td>
+         <td>29.1</td>
+         <td>Holanda</td>
+       </tr>
+       <tr>
+         <th>9</th>
+         <td>Coors light</td>
+         <td>25.1</td>
+         <td>USA</td>
+       </tr>
+       <tr>
+         <th>10</th>
+         <td class="title">Brahma</td>
+         <td>18.1</td>
+         <td>USA</td>
+       </tr>
+     </tbody>
+   </table>
+
+   <label><input type="checkbox" name="checkbox-0" /> Doy permiso para enviar mis datos </label>
+
+		<p> <a href="#page2" data-transition="slide">Página de vinos</a></p>
+
+	</div><!-- /content -->
+
+
+
+	<!--<footer data-role="footer" data-position="fixed">
+	</footer>-->
+
+</div><!-- /page -->
+
+<div data-role="page" id="page3">
+	<ul data-role="listview">
+					<li><a href="http://elbarondelascervezas.blogspot.com.es/">El barón de las cervezas</a></li>
+					<li><a href="http://humuluslupulus.net/">Humulus Lupulus</a></li>
+					<li><a href="http://hiposurinatum.blogspot.com.es/">Hipos Urinatum</a></li>
+				</ul>
+</div>
+
+
+
+<!-- Start of second page -->
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Futura página sobre vino</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+  <!--Segunda página. Solo me muestro si un link que referencia mi id se clica. -->
+		<p>En construcción</p>
+		<p><a href="#page1" data-transition="slide" data-rel="back" data-direction=”reverse”>Volver a página de cervezas</a></p>
+
+	</div><!-- /content -->
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+		<!-- Buttons footer TODO-->
+		<a href="index.html" data-role="button" data-icon="plus">Add</a>
+		<a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
+		<a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+		<!-- Buttons footer end-->
+	</div><!-- /footer -->
+</div><!-- /page -->
+<script src="js/main.js"></script>
+</body>
+</html>
